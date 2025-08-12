@@ -1,0 +1,20 @@
+<button (click)="isModalOpen = true">
+    Būtina<br>pasitikrinti!
+</button>
+
+<div class="modal-wrapper" [class.active]="isModalOpen">
+    <div class="backdrop" (click)="isModalOpen = false"></div>
+    <div class="modal">
+        <ol>
+            @for (check of checks; track check.id) {
+                <li>
+                    <input type="checkbox" id="option{{ check.id }}">
+                    <label for="option{{ check.id }}">{{ check.title }}</label>
+                </li>
+            }
+            <li>
+                Ir daugiau...
+            </li>
+        </ol>
+    </div>
+</div>

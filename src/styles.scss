@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.modal-wrapper {
+    &:not(.active) {
+        display: none;
+    }
+
+    .backdrop {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.75);
+        z-index: 2010;
+    }
+
+    .modal {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        width: 100%;
+        max-width: 800px;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        z-index: 2020;
+        padding: 36px;
+    }
+}

@@ -1,0 +1,43 @@
+.page-content {
+    padding: 60px 0;
+}
+
+.row {
+    display: flex;
+    gap: 36px;
+
+    & > * {
+        flex: 1;
+    }
+}
+
+form {
+    .group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 8px;
+
+        input {
+            padding: 8px 16px;
+        }
+
+        textarea {
+            height: 80px;
+        }
+    }
+
+    button {
+        background-color: royalblue;
+        color: white;
+        border: 0;
+        padding: 8px 16px;
+        margin-top: 8px;
+    }
+}
+
+.error {
+    background-color: red;
+    padding: 50px 20px;
+    text-align: center;
+}

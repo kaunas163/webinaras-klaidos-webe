@@ -1,0 +1,31 @@
+footer {
+    background-color: #222;
+    padding: 36px 0;
+
+    .container {
+        display: flex;
+        gap: 36px;
+
+        .column {
+            flex: 1;
+
+            h4 {
+                margin-top: 0;
+                color: white;
+            }
+
+            p {
+                color: white;
+                font-size: 8px;
+            }
+
+            a {
+                color: rgb(6, 24, 77);
+            }
+        }
+    }
+}
+
+pre {
+    margin: 0;
+}

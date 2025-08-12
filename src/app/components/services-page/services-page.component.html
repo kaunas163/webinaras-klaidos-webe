@@ -1,0 +1,19 @@
+<div class="container page-content">
+    <h1>Kuo galime padėti?</h1>
+
+    <div class="services-list">
+        @for (service of companyServices; track service.slug) {
+            <div class="service-box">
+                <div class="col">
+                    <img src="/assets/images/{{service.picture}}" alt="">
+                </div>
+                <div class="col">
+                    <h3>
+                        <a routerLink="/paslaugos">{{ service.title }}</a>
+                    </h3>
+                    <p>{{ service.shortDescription }}</p>
+                </div>
+            </div>
+        }
+    </div>
+</div>

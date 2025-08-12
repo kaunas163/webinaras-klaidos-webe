@@ -1,0 +1,45 @@
+<header>
+    <div class="container">
+        <h1>Mes fainiausi!</h1>
+        <p>Pati geriausia kokybė</p>
+    </div>
+</header>
+
+<div class="services content-box">
+    <div class="container">
+        <h2>Mūsų paslaugos</h2>
+
+        <div class="list">
+            @for (service of companyServices; track service.slug) {
+                <div class="service-box">
+                    <img src="/assets/images/{{service.picture}}" alt="">
+                    <h3>
+                        <a routerLink="/paslaugos">{{ service.title }}</a>
+                    </h3>
+                    <p>{{ service.shortDescription }}</p>
+                </div>
+            }
+        </div>
+
+        <div class="box">
+            <button>Žiūrėti daugiau</button>
+        </div>
+    </div>
+</div>
+
+<div class="testimonials content-box">
+    <div class="container">
+        <h2>Klientų atsiliepimai</h2>
+
+        <div class="list">
+            @for (testimonial of testimonials; track $index) {
+                <div class="testimonial-box">
+                    <img [src]="testimonial.picture">
+                    <h3>{{ testimonial.name }}</h3>
+                    <p>{{ testimonial.text }}</p>
+                    <p>When: {{ testimonial.date }}</p>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="page-content container">
+    <h1>Susisiekite su mumis</h1>
+
+    <div class="row">
+        <div class="info">
+            <h2>Rekvizitai</h2>
+            <p><strong>Įmonės pavadinimas:</strong> UAB Pamatukas</p>
+            <p><strong>Įmonės kodas:</strong> 123456789</p>
+            <p><strong>El. paštas:</strong> info&#64;pamatukas.lt</p>
+            <p><strong>Telefonas:</strong> +370 123 45678</p>
+        </div>
+        <div class="form">
+            <h2>Parašykite</h2>
+            @if (!isError) {
+                <form (submit)="onFormSubmit($event)">
+                    <div class="group">
+                        <label for="yourContactInfo">Jūsų vardas</label>
+                        <input type="text" id="yourName">
+                    </div>
+                    <div class="group">
+                        <label for="yourContactInfo">Jūsų el. pašto adresas arba telefonas</label>
+                        <input type="text" id="yourContactInfo">
+                    </div>
+                    <div class="group">
+                        <label>Žinutė mums</label>
+                        <textarea></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            } @else {
+                <div class="error">
+                    <h3>O ne! Įvyko klaida</h3>
+                </div>
+            }
+        </div>
+    </div>
+</div>
