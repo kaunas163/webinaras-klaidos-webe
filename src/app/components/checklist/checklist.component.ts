@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
     selector: 'app-checklist',
     standalone: true,
-    imports: [],
+    imports: [
+        RouterModule,
+    ],
     templateUrl: './checklist.component.html',
     styleUrl: './checklist.component.scss'
 })
